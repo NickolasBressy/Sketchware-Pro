@@ -1,4 +1,4 @@
-package mod.trindadedev.settings.appearance;
+package mod.trindadedev.ui.fragments.settings.appearance;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,18 +9,18 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.sketchware.remod.R;
-import com.sketchware.remod.databinding.SettingsAppearanceBinding;
+import com.sketchware.remod.databinding.FragmentSettingsAppearanceBinding;
 
 import mod.hey.studios.util.Helper;
-import mod.trindadedev.settings.appearance.theme.manage.ThemeManager;
+import mod.trindadedev.manage.theme.ThemeManager;
 
-public class AppearanceFragment extends Fragment {
+public class SettingsAppearanceFragment extends Fragment {
 
-    private SettingsAppearanceBinding binding;
+    private FragmentSettingsAppearanceBinding binding;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        binding = SettingsAppearanceBinding.inflate(inflater, container, false);
+        binding = FragmentSettingsAppearanceBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
 
