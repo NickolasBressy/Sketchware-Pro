@@ -1,7 +1,6 @@
 package mod.hey.studios.project.backup;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Environment;
@@ -10,6 +9,8 @@ import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 import android.view.LayoutInflater;
+
+import androidx.appcompat.app.AlertDialog;
 
 import com.besome.sketch.ProjectsFragment;
 
