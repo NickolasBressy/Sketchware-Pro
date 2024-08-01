@@ -195,8 +195,7 @@ public class BackupRestoreManager {
                   .setTitle("Please wait")
                   .setCancelable(false)
                   .setView(loadingDialogBinding.getRoot())
-                  .create();
-            dlg.show();
+                  .show();
         }
 
         @Override
@@ -247,8 +246,7 @@ public class BackupRestoreManager {
                   .setTitle("Please wait")
                   .setCancelable(false)
                   .setView(loadingDialogBinding.getRoot())
-                  .create();
-            dlg.show();
+                  .show();
         }
 
         @Override
