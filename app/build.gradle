@@ -161,6 +161,7 @@ dependencies {
     implementation "com.github.topjohnwu.libsu:core:5.0.4"
     implementation "dev.chrisbanes.insetter:insetter:0.6.1"
 
+    implementation "com.github.aquilesTrindade.trindade-util:components:3.0.8"
 
     // Analytics and Crashlytics
     if (analyticsEnabled) {
