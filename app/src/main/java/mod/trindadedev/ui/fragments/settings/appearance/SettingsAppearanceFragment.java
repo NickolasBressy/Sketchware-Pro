@@ -32,23 +32,23 @@ public class SettingsAppearanceFragment extends Fragment {
 
         switch (ThemeManager.getCurrentTheme(requireContext())) {
             case ThemeManager.THEME_LIGHT:
-                binding.toggleThemes.check(R.id.themeLight);
+                binding.toggleThemes.check(R.id.theme_light);
                 break;
             case ThemeManager.THEME_DARK:
-                binding.toggleThemes.check(R.id.themeDark);
+                binding.toggleThemes.check(R.id.theme_dark);
                 break;
             default:
-                binding.toggleThemes.check(R.id.themeSystem);
+                binding.toggleThemes.check(R.id.theme_system);
                 break;
         }
 
         binding.toggleThemes.setOnCheckedChangeListener((group, checkedId) -> {
             if (checkedId != View.NO_ID) {
-                if (checkedId == R.id.themeLight) {
+                if (checkedId == R.id.theme_light) {
                     ThemeManager.applyTheme(requireContext(), ThemeManager.THEME_LIGHT);
-                } else if (checkedId == R.id.themeSystem) {
+                } else if (checkedId == R.id.theme_system) {
                     ThemeManager.applyTheme(requireContext(), ThemeManager.THEME_SYSTEM);
-                } else if (checkedId == R.id.themeDark) {
+                } else if (checkedId == R.id.theme_dark) {
                     ThemeManager.applyTheme(requireContext(), ThemeManager.THEME_DARK);
                 } else {
                     ThemeManager.applyTheme(requireContext(), ThemeManager.THEME_SYSTEM);
