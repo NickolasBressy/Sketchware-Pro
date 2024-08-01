@@ -162,7 +162,8 @@ dependencies {
     implementation "dev.chrisbanes.insetter:insetter:0.6.1"
 
     implementation "com.github.aquilesTrindade.trindade-util:components:3.0.8"
-
+    implementation "com.github.aquilesTrindade.trindade-util:filepicker:3.0.8"
+    
     // Analytics and Crashlytics
     if (analyticsEnabled) {
         new File("$projectDir/google-services.json").text = secrets
