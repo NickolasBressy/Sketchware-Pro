@@ -365,7 +365,7 @@ public class ConfigActivity extends AppCompatActivity {
     }
 
     private void addSwitchPreference(String title, String description, String keyName, boolean defaultValue) {
-        addSwitchPreference(title, description, keyName, defaultValue, null, lastItem);
+        addSwitchPreference(title, description, keyName, defaultValue, null);
     }
 
     private void addSwitchPreference(String title, String description, String keyName, boolean defaultValue, CompoundButton.OnCheckedChangeListener onCheckedChangeListener) {
