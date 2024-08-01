@@ -9,6 +9,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+import android.view.LayoutInflater;
 
 import com.besome.sketch.ProjectsFragment;
 
