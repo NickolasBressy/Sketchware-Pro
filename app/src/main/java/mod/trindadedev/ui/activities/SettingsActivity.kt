@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 
+import com.sketchware.remod.R
 import com.sketchware.remod.databinding.ActivitySettingsBinding
 
 import mod.trindadedev.ui.fragments.settings.appearance.SettingsAppearanceFragment
