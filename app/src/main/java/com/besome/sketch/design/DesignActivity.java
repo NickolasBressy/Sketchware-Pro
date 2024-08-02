@@ -116,7 +116,7 @@ import mod.jbk.diagnostic.CompileErrorSaver;
 import mod.jbk.diagnostic.MissingFileException;
 import mod.jbk.util.LogUtil;
 import mod.khaled.logcat.LogReaderActivity;
-import mod.trindadedev.tools.apk.ApkSignatures;
+import mod.trindadedev.tools.ApkSignatures;
 
 public class DesignActivity extends BaseAppCompatActivity implements OnClickListener {
     private ImageView xmlLayoutOrientation;

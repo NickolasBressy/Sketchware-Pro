@@ -24,7 +24,7 @@
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
                 app:navigationIcon="@drawable/abc_ic_ab_back_material"
-                app:title="@string/settings_appearance" />
+                app:title="@string/appearance" />
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -42,7 +42,7 @@
             android:orientation="vertical">
 
             <LinearLayout
-                android:id="@+id/preference_group_theme"
+                android:id="@+id/preferenceGroupTheme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="8dp"
@@ -52,40 +52,40 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="?colorPrimary"
+                    android:textColor="?attr/colorPrimary"
                     android:layout_marginLeft="8dp"
-                    android:text="@string/settings_appearance_theme" />
+                    android:text="@string/appearance_theme" />
 
                 <LinearLayout
-                    android:id="@+id/preference_theme_content"
+                    android:id="@+id/preferenceThemeContent"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <com.google.android.material.chip.ChipGroup
-                        android:id="@+id/toggle_themes"
+                        android:id="@+id/toggleThemes"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
                         app:singleSelection="true">
 
                         <com.google.android.material.chip.Chip
-                            android:id="@+id/theme_light"
+                            android:id="@+id/themeLight"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/settings_appearance_theme_light" />
+                            android:text="@string/appearance_theme_light" />
 
                         <com.google.android.material.chip.Chip
-                            android:id="@+id/theme_system"
+                            android:id="@+id/themeSystem"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/settings_appearance_theme_system" />
+                            android:text="@string/appearance_theme_system" />
 
                         <com.google.android.material.chip.Chip
-                            android:id="@+id/theme_dark"
+                            android:id="@+id/themeDark"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/settings_appearance_theme_dark" />
+                            android:text="@string/appearance_theme_dark" />
 
                     </com.google.android.material.chip.ChipGroup>
 

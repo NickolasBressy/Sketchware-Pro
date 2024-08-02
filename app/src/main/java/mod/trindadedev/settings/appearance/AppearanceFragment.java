@@ -1,4 +1,4 @@
-package mod.trindadedev.ui.fragments.settings.appearance;
+package mod.trindadedev.settings.appearance;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,18 +9,18 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.sketchware.remod.R;
-import com.sketchware.remod.databinding.FragmentSettingsAppearanceBinding;
+import com.sketchware.remod.databinding.SettingsAppearanceBinding;
 
 import mod.hey.studios.util.Helper;
-import mod.trindadedev.manage.theme.ThemeManager;
+import mod.trindadedev.settings.appearance.theme.manage.ThemeManager;
 
-public class SettingsAppearanceFragment extends Fragment {
+public class AppearanceFragment extends Fragment {
 
-    private FragmentSettingsAppearanceBinding binding;
+    private SettingsAppearanceBinding binding;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        binding = FragmentSettingsAppearanceBinding.inflate(inflater, container, false);
+        binding = SettingsAppearanceBinding.inflate(inflater, container, false);
         return binding.getRoot();
     }
 
@@ -32,23 +32,23 @@ public class SettingsAppearanceFragment extends Fragment {
 
         switch (ThemeManager.getCurrentTheme(requireContext())) {
             case ThemeManager.THEME_LIGHT:
-                binding.toggleThemes.check(R.id.theme_light);
+                binding.toggleThemes.check(R.id.themeLight);
                 break;
             case ThemeManager.THEME_DARK:
-                binding.toggleThemes.check(R.id.theme_dark);
+                binding.toggleThemes.check(R.id.themeDark);
                 break;
             default:
-                binding.toggleThemes.check(R.id.theme_system);
+                binding.toggleThemes.check(R.id.themeSystem);
                 break;
         }
 
         binding.toggleThemes.setOnCheckedChangeListener((group, checkedId) -> {
             if (checkedId != View.NO_ID) {
-                if (checkedId == R.id.theme_light) {
+                if (checkedId == R.id.themeLight) {
                     ThemeManager.applyTheme(requireContext(), ThemeManager.THEME_LIGHT);
-                } else if (checkedId == R.id.theme_system) {
+                } else if (checkedId == R.id.themeSystem) {
                     ThemeManager.applyTheme(requireContext(), ThemeManager.THEME_SYSTEM);
-                } else if (checkedId == R.id.theme_dark) {
+                } else if (checkedId == R.id.themeDark) {
                     ThemeManager.applyTheme(requireContext(), ThemeManager.THEME_DARK);
                 } else {
                     ThemeManager.applyTheme(requireContext(), ThemeManager.THEME_SYSTEM);
