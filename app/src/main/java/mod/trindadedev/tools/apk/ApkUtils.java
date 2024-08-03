@@ -8,24 +8,21 @@ import java.util.Formatter;
 
 public class ApkUtils {
 
-    private String apkPath;
+    private static String apkPath;
 
-    public ApkUtils() {
-    }
-
-    public void setApkPath(String path) {
+    public static void setApkPath(String path) {
         apkPath = path;
     }
 
-    public String getSHA1() {
+    public static String getSHA1() {
         return getSignature("SHA-1");
     }
 
-    public String getSHA256() {
+    public static String getSHA256() {
         return getSignature("SHA-256");
     }
 
-    private String getSignature(String algorithm) {
+    private static String getSignature(String algorithm) {
         if (apkPath == null || apkPath.isEmpty()) {
             return "APK path must be set before computing signature.";
         }
@@ -46,13 +43,12 @@ public class ApkUtils {
         }
     }
 
-    private String byteArrayToHex(byte[] hashBytes) {
+    private static String byteArrayToHex(byte[] hashBytes) {
         try (Formatter formatter = new Formatter()) {
             for (byte b : hashBytes) {
-                formatter.format("%02X:", b);
+                formatter.format("%02x", b);
             }
-            String result = formatter.toString();
-            return result.substring(0, result.length() - 1);  // Remove the last colon
+            return formatter.toString().toUpperCase();
         }
     }
 }
