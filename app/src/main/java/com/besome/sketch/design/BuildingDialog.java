@@ -1,8 +1,8 @@
 package com.besome.sketch.design;
 
-import android.app.Dialog;
 import android.content.Context;
-import android.view.Window;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -11,15 +11,16 @@ import com.sketchware.remod.R;
 
 import mod.hey.studios.util.Helper;
 
-public class BuildingDialog extends Dialog {
+import com.google.android.material.bottomsheet.BottomSheetDialog;
+
+public class BuildingDialog extends BottomSheetDialog {
 
     private final TextView tvProgress;
     private final QuizBoard quizBoard;
     private boolean cancelOnBackPressed;
 
     public BuildingDialog(Context context) {
-        super(context, R.style.progress);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        super(context);
         setContentView(R.layout.build_progress_msg_box);
 
         LinearLayout quizLayout = findViewById(R.id.layout_quiz);
@@ -28,10 +29,12 @@ public class BuildingDialog extends Dialog {
         setTitle(Helper.getResString(R.string.common_message_progress));
         tvProgress = findViewById(R.id.tv_progress);
         tvProgress.setText(Helper.getResString(R.string.common_message_loading));
-        super.setCanceledOnTouchOutside(false);
-        super.setCancelable(true);
+        
+        setCanceledOnTouchOutside(false);
+        setCancelable(true);
 
-        getWindow().getAttributes().windowAnimations = R.style.BottomSheetAnimation;
+        // Apply custom animations if needed
+        getWindow().setWindowAnimations(R.style.BottomSheetAnimation);  // Ensure you have this style defined
     }
 
     public void setProgress(String text) {
