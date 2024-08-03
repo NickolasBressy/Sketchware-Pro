@@ -20,7 +20,7 @@ public class BuildingDialog extends BottomSheetDialog {
     private boolean cancelOnBackPressed;
 
     public BuildingDialog(Context context) {
-        super(context);
+        super(context, R.style.progress);
         setContentView(R.layout.build_progress_msg_box);
 
         LinearLayout quizLayout = findViewById(R.id.layout_quiz);
@@ -32,9 +32,6 @@ public class BuildingDialog extends BottomSheetDialog {
         
         setCanceledOnTouchOutside(false);
         setCancelable(true);
-
-        // Apply custom animations if needed
-        getWindow().setWindowAnimations(R.style.BottomSheetAnimation);  // Ensure you have this style defined
     }
 
     public void setProgress(String text) {
