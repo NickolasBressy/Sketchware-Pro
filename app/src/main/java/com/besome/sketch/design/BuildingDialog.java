@@ -20,7 +20,7 @@ public class BuildingDialog extends BottomSheetDialog {
     private boolean cancelOnBackPressed;
 
     public BuildingDialog(Context context) {
-        super(context, R.style.progress);
+        super(context, R.style.Theme_SketchwarePro);
         setContentView(R.layout.build_progress_msg_box);
 
         LinearLayout quizLayout = findViewById(R.id.layout_quiz);
